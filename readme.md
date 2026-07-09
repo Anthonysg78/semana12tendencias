@@ -3,7 +3,7 @@
 
 **Asignatura:** SISTEMAS OPERATIVOS / TENDENCIAS TECNOLÓGICAS  
 **Estudiante:** Anthony Sagbay  
-**Semana:** 8  
+**Semana:** 12  
 **Fecha:** 9 de julio de 2026  
 **Actividad:** Informe de Práctica - Arquitectura de Microservicios
 
@@ -169,8 +169,8 @@ graph TD
     end
 
     subgraph "Capa de Enrutamiento Central"
-        AG[API Gateway<br/>(Puerto: 3001)]
-        SR[Servicio Descubridor<br/>(Puerto: 4000)]
+        AG["API Gateway<br/>(Puerto: 3001)"]
+        SR["Servicio Descubridor<br/>(Puerto: 4000)"]
         
         AG -.->|1. Consulta IPs activas| SR
     end
