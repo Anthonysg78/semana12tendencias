@@ -172,7 +172,7 @@ graph TD
         AG["API Gateway<br/>(Puerto: 3001)"]
         SR["Servicio Descubridor<br/>(Puerto: 4000)"]
         
-        AG -.->|1. Consulta IPs activas| SR
+        AG -.->|"1. Consulta IPs activas"| SR
     end
 
     subgraph "Capa de Microservicios (Despliegue Independiente)"
@@ -181,21 +181,21 @@ graph TD
         SS[Session Service]
         TS[Telemetry Service]
         
-        AS -.->|2. Reporta su estado (Heartbeat)| SR
-        PS -.->|2. Reporta su estado (Heartbeat)| SR
-        SS -.->|2. Reporta su estado (Heartbeat)| SR
-        TS -.->|2. Reporta su estado (Heartbeat)| SR
+        AS -.->|"2. Reporta su estado (Heartbeat)"| SR
+        PS -.->|"2. Reporta su estado (Heartbeat)"| SR
+        SS -.->|"2. Reporta su estado (Heartbeat)"| SR
+        TS -.->|"2. Reporta su estado (Heartbeat)"| SR
     end
 
     %% Accesos de los clientes
-    FE -->|Peticiones Web| AG
-    ESP -->|Datos de Telemetría| AG
+    FE -->|"Peticiones Web"| AG
+    ESP -->|"Datos de Telemetría"| AG
 
     %% Ruteo interno del Gateway a los Microservicios
-    AG ==>|3. Ruteo proxy| AS
-    AG ==>|3. Ruteo proxy| PS
-    AG ==>|3. Ruteo proxy| SS
-    AG ==>|3. Ruteo proxy| TS
+    AG ==>|"3. Ruteo proxy"| AS
+    AG ==>|"3. Ruteo proxy"| PS
+    AG ==>|"3. Ruteo proxy"| SS
+    AG ==>|"3. Ruteo proxy"| TS
 ```
 
 ---
